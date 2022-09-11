@@ -1,0 +1,36 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="BaseTheme" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDark</item>
+    </style>
+
+    <!-- API Level specific theme that is loaded in the manifest -->
+    <style name="AppTheme" parent="BaseTheme">
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay"
+           parent="ThemeOverlay.AppCompat.ActionBar"/>
+
+    <style name="AppTheme.PopupOverlay"
+           parent="ThemeOverlay.AppCompat.Light"/>
+
+    <style name="CardViewStyle">
+        <item name="android:layout_marginLeft">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_marginRight">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="cardUseCompatPadding">false</item>
+        <item name="cardCornerRadius">@dimen/cardview_default_radius</item>
+        <item name="cardPreventCornerOverlap">false</item>
+    </style>
+
+</resources>
