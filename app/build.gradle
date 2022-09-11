@@ -1,0 +1,79 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 30
+
+    defaultConfig {
+        applicationId "com.feedad.demo"
+        minSdkVersion 19
+        targetSdkVersion 30
+        versionCode 4
+        versionName "1.4.9"
+        multiDexEnabled true
+
+        /* --> DELETE THIS BLOCK IF YOU CONFIGURE THE APP VIA XML VALUES <-- */
+
+        // The demo app can be either configured using local.properties file or xml values.
+        // Have a look at config_feedad.xml on how to configure the SDK via XML values.
+        // It is recommended to use the XML configuration over property files and to delete this block.
+        Properties properties = new Properties()
+        properties.load(project.rootProject.file("local.properties").newDataInputStream())
+        resValue 'string', 'feedad_client_token', properties.getProperty("feedad.clientToken", "")
+
+        // DFP example config via properties
+        resValue 'string', 'dfp_unit_id', properties.getProperty("dfp.unitId", "")
+
+        // AdMob example config via properties
+        // EDIT ADMOB APP ID IN AndroidManifest.xml
+        resValue 'string', 'admob_ad_unit_native', properties.getProperty("admob.unitId", "")
+
+        /* --> DELETE UNTIL HERE <-- */
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildFeatures {
+        dataBinding true
+    }
+}
+
+repositories {
+
+    // Configures gradle to include the FeedAd maven repository
+    mavenCentral()
+
+    google()
+    maven { url 'https://maven.google.com' }
+}
+
+dependencies {
+    // Dependencies only used by the demo app
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    // FeedAd requires an android support library version of 25.3.x upwards
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+
+    // Includes the FeedAd SDK
+    implementation('com.feedad.android:feedad-sdk:1.4.14') {
+        transitive = true
+    }
+
+    // Only required for DFP and AdMob examples:
+    implementation('com.google.android.gms:play-services-ads:19.8.0') {
+        exclude group: 'com.android.support'
+    }
+
+    // Only required for AppLovin example:
+    implementation 'com.applovin:applovin-sdk:11.3.3'
+    implementation 'com.feedad.android:feedad-applovin:1.0.1'
+}
