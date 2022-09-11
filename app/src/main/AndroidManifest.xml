@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.feedad.demo">
+
+	<uses-permission android:name="android.permission.INTERNET" />
+
+    <queries>
+		<intent>
+			<action android:name="android.intent.action.VIEW" />
+			<data android:scheme="*" />
+		</intent>
+	</queries>
+
+	<application
+		android:name=".App"
+		android:allowBackup="true"
+		android:hardwareAccelerated="true"
+		android:icon="@mipmap/appicon"
+		android:label="@string/app_name"
+		android:supportsRtl="true"
+		android:theme="@style/AppTheme.NoActionBar"> <!-- FeedAd requires HW acceleration -->
+
+		<meta-data
+			android:name="applovin.sdk.key"
+			android:value="BdQgsbU0cNyWL5WPBsdnFcI6dxirA25MJV1vCBg0MVUi3z3sPuT8v5oW-8dwKQTedD2D4emcZB9WzRipN3lgSs" />
+
+		<meta-data
+			android:name="com.google.android.gms.ads.APPLICATION_ID"
+			android:value="ca-app-pub-3940256099942544~3347511713" />
+
+		<activity
+			android:name=".MainActivity"
+			android:configChanges="orientation|keyboardHidden|keyboard|screenSize">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+
+	</application>
+
+</manifest>
