@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">FeedAd Demo</string>
+
+	<string name="placeholder_body">Nunquam visum lura. Nutrixs resistere, tanquam festus demissio. Heu, fluctus! Spatiis ridetis in lotus alta muta! Adiurators mori! Peregrinationes etiam ducunt ad altus buxum. Cum tumultumque cadunt, omnes bromiumes perdere ferox, audax cedriumes.</string>
+
+	<string name="menu_recycler_view">RecyclerView</string>
+    <string name="menu_scroll_view">ScrollView</string>
+    <string name="menu_recyclerview_advanced">Advanced</string>
+	<string name="title_recycler_view">RecyclerView Integration</string>
+	<string name="title_recyclerview_advanced">Advanced Integration</string>
+
+	<string name="placeholder_name">Bjoern Exampleson</string>
+    <string name="placeholder_subtitle">More Infos: FeedAd.com</string>
+
+	<string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+	<string name="drawer_hint">Select an example integration from the drawer menu.</string>
+    <string name="menu_dfp">DFP Example</string>
+    <string name="menu_applovin">AppLovin MAX Example</string>
+    <string name="menu_admob">AdMob Native Custom Event</string>
+    <string name="menu_standalone">Standalone Ad</string>
+    <string name="menu_interstitial">Interstitial Ad</string>
+    <string name="request_interstitial_ad">Request Interstitial Ad</string>
+    <string name="show_interstitial_ad">Show Ad</string>
+    <string name="requesting_interstitial_ad">Requesting Interstitial Ad</string>
+    <string name="interstitial_loaded">Interstitial loaded</string>
+    <string name="admob_native_fallback_caption">Native Fallback View</string>
+	<string name="titleBannerAd">Banner Ad</string>
+	<string name="titleNativeAd">Native Ad</string>
+	<string name="titleInterstitialAd">Interstitial Ad</string>
+	<string name="titleAdView">Ad Container</string>
+	<string name="request_banner_ad">Request Banner Ad</string>
+	<string name="request_native_ad">Request Native Ad</string>
+</resources>
